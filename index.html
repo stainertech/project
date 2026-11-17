@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+
+<title>Loan Application Status</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    min-height: 850px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 75px;
+}
+
+.logo span:first-child {
+    color: #2670c9;
+}
+
+.logo span:last-child {
+    color: #e45c42;
+}
+
+.success-icon {
+    width: 66px;
+    height: 66px;
+    border: 5px solid #3777ce;
+    border-radius: 50%;
+    margin: 0 auto 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3777ce;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+    color: #252b40;
+    margin-bottom: 13px;
+}
+
+.message {
+    color: #9ba3b3;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 53px;
+}
+
+.demo-label {
+    display: inline-block;
+    font-size: 11px;
+    color: #805c18;
+    background: #fff3d6;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.details {
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+    font-size: 15px;
+    gap: 12px;
+}
+
+.detail-row .label {
+    color: #929bad;
+}
+
+.detail-row .value {
+    color: #333b50;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.detail-row:first-child .value {
+    color: #3976c6;
+}
+
+.done-btn {
+    width: 100%;
+    height: 57px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(110deg, #3978df, #a52bd1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.done-btn:active {
+    transform: scale(0.98);
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #aab0bd;
+}
+
+@media(max-width:380px) {
+    .container {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .logo {
+        margin-bottom: 65px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <span>Eco</span><span>Cash</span>
+    </div>
+
+    <div class="success-icon">✓</div>
+
+    <h1>Congratulations!</h1>
+
+    <p class="message">
+        Your application status is displayed below.
+        Please confirm the details through the
+        authorized service provider.
+    </p>
+
+    <div class="demo-label">
+        SAMPLE PREVIEW
+    </div>
+
+    <div class="details">
+
+        <div class="detail-row">
+            <span class="label">Approved amount</span>
+            <span class="value">$5,000</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Term</span>
+            <span class="value">12 months</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">Wallet</span>
+            <span class="value" id="walletNumber">
+                Not connected
+            </span>
+        </div>
+
+    </div>
+
+    <button class="done-btn" onclick="finish()">
+        DONE
+    </button>
+
+    <div class="footer">
+        Sample application interface
+    </div>
+
+</div>
+
+<script>
+function finish() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
